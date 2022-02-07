@@ -98,8 +98,8 @@ void Principal::mouseReleaseEvent(QMouseEvent *event)
     // Aceptar el vento
     event->accept();
     update();
-
 }
+
 void Principal::on_actionAncho_triggered()
 {
     mAncho = QInputDialog::getInt(this,

@@ -52,7 +52,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Copyright 2022-2022 &lt;span style=&quot; font-weight:700;&quot;&gt;Leandro Lara&lt;/span&gt;. UPS. Todos los derechos reservados.&lt;/p&gt;&lt;p&gt;Código disponible en: &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Copyright 2022-2022 &lt;span style=&quot; font-weight:700;&quot;&gt;Leandro Lara&lt;/span&gt;. UPS. Todos los derechos reservados.&lt;/p&gt;&lt;p&gt;Código disponible en: &lt;a href=&quot;https://github.com/Lion999CAP/Paint-2.0&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;GitHub&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
