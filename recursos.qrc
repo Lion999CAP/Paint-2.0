@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../../../../Downloads/cepillo-de-pintura.png</file>
+    </qresource>
+</RCC>
