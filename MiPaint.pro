@@ -28,7 +28,7 @@ FORMS += \
     acerca.ui \
     principal.ui
 
-TRANSLATIONS = tienda_jp_JP.ts
+TRANSLATIONS = miPaint_ja.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

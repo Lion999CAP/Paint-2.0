@@ -2,11 +2,27 @@
 
 #include <QInputDialog>
 #include <QApplication>
+#include <QMessageBox>
+#include <QLocale>
 #include <QTranslator>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    QLocale location;
+    QString idioma = location.languageToString(location.language());
+    // Objeto para manejar las traducciones
+    QTranslator traducion;
+    if(idioma == "Japanese"){
+        traducion.load(":/miPaint_ja_JA.qm");
+    }
+    if((idioma != "Japanese") && (idioma != "Spanish")){
+        QMessageBox::warning(NULL,"Advertencia","El idioma regional requerido no se encuentra");
+    }
+    if(idioma != QLocale::Spanish){
+        a.installTranslator(&traducion);
+    }
+    /*
     QTranslator traduccion;
     QStringList idioma;
     idioma << "Castellano" << "Japones";
@@ -16,6 +32,7 @@ int main(int argc, char *argv[])
     }else if (idiomaSeleccionado != "Castellano"){
         a.installTranslator(&traduccion);
     }
+    */
     Principal w;
     w.show();
     return a.exec();

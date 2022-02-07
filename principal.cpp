@@ -87,11 +87,11 @@ void Principal::mouseMoveEvent(QMouseEvent *event)
 
 void Principal::mouseReleaseEvent(QMouseEvent *event)
 {
-    if(mTipo==1 ){
+    if(mTipo==1 && ui->actionLineas->isChecked()){
         mPainter->drawLine(mInicial, mFinal);
-    }else if(mTipo==2){
+    }else if(mTipo==2 && ui->actionRect_nculos->isChecked()){
         mPainter->drawRect(mInicial.x(),mInicial.y(),mFinal.x()-mInicial.x(),mFinal.y()-mInicial.y());
-    }else if(mTipo==3){
+    }else if(mTipo==3 && ui->actionCircunferencias->isChecked()){
         mPainter->drawEllipse(mInicial.x(),mInicial.y(),mFinal.x()-mInicial.x(),mFinal.y()-mInicial.y());
     }
     mPuedeDibujar = false;
@@ -149,17 +149,28 @@ void Principal::on_actionGuardar_triggered()
 void Principal::on_actionRect_nculos_triggered()
 {
     mTipo=2;
+    ui->actionRect_nculos->setCheckable(true);
+    ui->actionLibre->setChecked(false);
+    ui->actionLineas->setCheckable(false);
+    ui->actionCircunferencias->setCheckable(false);
 }
 
 void Principal::on_actionCircunferencias_triggered()
 {
     mTipo=3;
+    ui->actionLibre->setChecked(false);
+    ui->actionLineas->setCheckable(false);
+    ui->actionRect_nculos->setCheckable(false);
+    ui->actionCircunferencias->setCheckable(true);
 }
 
 void Principal::on_actionLineas_triggered()
 {
     mTipo=1;
     ui->actionLibre->setChecked(false);
+    ui->actionLineas->setCheckable(true);
+    ui->actionRect_nculos->setCheckable(false);
+    ui->actionCircunferencias->setCheckable(false);
 }
 
 void Principal::on_actionAcerca_del_creador_triggered()
